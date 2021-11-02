@@ -49,15 +49,18 @@ function generaCampoMinato(numCelle, livelloGioco) {
     // creo un ciclo per:
     for (let i = 1; i <= numCelle; i++) {
 
-        console.log("numero cella:", i);
-
         // generare il numero di celle corrispondenti al livello di difficoltà
         let nuovaCella = document.createElement("div");
         nuovaCella.className = "cella " + livelloGioco;
+        nuovaCella.innerHTML = `<div class="numero-cella">${i}</div>`;
         document.getElementById("contenitore-celle").append(nuovaCella);
-        
+
         // agganciare a ogni cella l'evento "click"
-        // cambio lo sfondo della cella cliccata
-        // mostro il numero della cella cliccata
+        nuovaCella.addEventListener("click", function() {
+
+            // cambio lo sfondo della cella cliccata
+            // mostro il numero della cella cliccata
+            nuovaCella.classList.add("cliccata");
+        });        
     }
 }

@@ -17,6 +17,9 @@
 .cella {
     background-color: green;
     border: 1px solid greenyellow;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .cella.facile {
@@ -32,4 +35,17 @@
 .cella.difficile {
     width: calc(100% / 7);
     height: calc(100% / 7);
+}
+
+.numero-cella {
+    display: none;
+    color: white;
+}
+
+.cella.cliccata {
+    background-color: cornflowerblue;
+}
+
+.cella.cliccata .numero-cella {
+    display: block;
 }
